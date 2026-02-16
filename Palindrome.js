@@ -1,7 +1,7 @@
-let number = 1001;
+let number = 8;
 function isPalindrome(n) {
-  if (n < 10 && n >= 0) {
-    return true;
+  if (n < 0) {
+    return false;
   }
   let temp = n;
   let dec = 0;
