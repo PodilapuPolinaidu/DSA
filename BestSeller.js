@@ -19,7 +19,6 @@ function bestProfit(arr) {
   let maxProfit = 0;
   let minPrice = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    
     if (arr[i] - minPrice > maxProfit) {
       maxProfit = arr[i] - minPrice;
     }
@@ -27,7 +26,7 @@ function bestProfit(arr) {
       minPrice = arr[i];
     }
   }
-  console.log(maxProfit);
+  return maxProfit;
 }
-
-bestProfit(prices);
+let result = bestProfit(prices);
+console.log(result);
