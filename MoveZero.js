@@ -1,4 +1,4 @@
-let arr = [0, 1, 0, 3, 12];
+let arr = [1,2,3];
 
 function moveZores(arr) {
   let x = 0;
@@ -6,10 +6,15 @@ function moveZores(arr) {
     if (arr[i] != 0) {
       arr[x] = arr[i];
       x++;
-     
     }
   }
-  console.log(arr, x);
+  for (let i = x; i < arr.length; i++) {
+    arr[i] = 0;
+  }
+
+  return arr;
 }
 
-moveZores(arr);
+let result = moveZores(arr);
+
+console.log(result);
