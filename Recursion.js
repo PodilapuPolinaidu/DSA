@@ -4,7 +4,7 @@ function fun(a) {
     return;
   }
   console.log(a);
-  a = a - 1;
-  fun(a);
+  // a = a - 1;
+  fun(a--);
 }
 fun(a);
