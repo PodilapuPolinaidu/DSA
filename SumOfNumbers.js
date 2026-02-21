@@ -1,4 +1,9 @@
 let n = 10;
-function sumOfNumbers() {
-  return sumOfNumbers(n) + sumOfNumbers(n - 1);
+function sumOfNumbers(n) {
+  if (n == 0) {
+    return 0;
+  }
+  return n + sumOfNumbers(n - 1);
 }
+let sum = sumOfNumbers(n);
+console.log(sum);
