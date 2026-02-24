@@ -8,16 +8,20 @@ let n = 8;
 //   return fibnoccoNumber(n - 1) + fibnoccoNumber(n - 2);
 // }
 
-function fibnoccoNumber(n) {
-  let n1 = 0;
-  let n2 = 1;
-  console.log(n1);
-  // console.log(n2);
-  let n3 = 0;
-  while (n) {
-    n3 = n1 + n2;
+function fibnoccoNumber(n) { 
+let n = 10;   
+let a = 0, b = 1;
 
-  }
+console.log(a); 
+console.log(b); 
+
+for (let i = 2; i < n; i++) {
+    let next = a + b;
+    console.log(next);
+
+    a = b;
+    b = next;
+}
 }
 let res = fibnoccoNumber(n);
 console.log(res);
