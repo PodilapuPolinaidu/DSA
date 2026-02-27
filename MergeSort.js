@@ -1,4 +1,5 @@
 let arr = [5, 2, 3, 1];
+// merge array
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
   let mid = Math.floor(arr.length / 2);
