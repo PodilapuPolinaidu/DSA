@@ -28,8 +28,9 @@ MyLinkedList.prototype.addAtTail = function (val) {
   this.size++;
 };
 
-MyLinkedList.prototype.addAtIndex = function (val) {
+MyLinkedList.prototype.addAtIndex = function (index, val) {
   let newNode = new Node(val);
+  if (index < 0 || index >= this.size) return;
   if (index == 0) {
     this.addToHead(val);
     return;
@@ -47,7 +48,7 @@ MyLinkedList.prototype.addAtIndex = function (val) {
   this.size++;
 };
 
-MyLinkedList.prototype.deleteNode = function (val) {
+MyLinkedList.prototype.get = function (index) {
   let cur = this.head;
   if (index < 0 || index >= this.size) {
     return -1;
@@ -57,3 +58,20 @@ MyLinkedList.prototype.deleteNode = function (val) {
   }
   return cur.val;
 };
+
+MyLinkedList.prototype.deleteAtIndex = function (index) {
+  if (index == 0) {
+    this.head = this.head.next;
+  }
+  if (index < 0 || index >= this.size) {
+    return;
+  }
+  let cur = this.head;
+
+  for (let i = 0; i < index - 1; i++) {
+    cur = cur.next;
+  }
+  cur.next = cur.next.next;
+};
+
+console.log(MyLinkedList());
