@@ -46,3 +46,14 @@ MyLinkedList.prototype.addAtIndex = function (val) {
   }
   this.size++;
 };
+
+MyLinkedList.prototype.deleteNode = function (val) {
+  let cur = this.head;
+  if (index < 0 || index >= this.size) {
+    return -1;
+  }
+  for (let i = 0; i < index; i++) {
+    cur = cur.next;
+  }
+  return cur.val;
+};
