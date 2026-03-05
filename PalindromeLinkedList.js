@@ -17,7 +17,7 @@ function palindrome(head) {
 
   let firstlist = head;
   let secondlist = pre;
-
+// checking first nd last
   while (secondlist) {
     if (firstlist.value != secondlist.value) {
       return false;
