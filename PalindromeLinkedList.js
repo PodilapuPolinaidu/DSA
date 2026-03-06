@@ -8,7 +8,6 @@ function palindrome(head) {
 
   let pre = null;
   let cur = slow;
-  //Reverse number
   while (cur) {
     let temp = cur.next;
     cur.next = pre;
