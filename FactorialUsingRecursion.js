@@ -6,6 +6,6 @@ function factorialOfNum(n) {
 
   return n * factorialOfNum(n - 1);
 }
-
+// 
 let result = factorialOfNum(n);
 console.log(result)
